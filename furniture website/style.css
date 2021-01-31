@@ -1,0 +1,347 @@
+            * {
+                margin: 0;
+                padding: 0
+            }
+            
+             ::before,
+             ::after {
+                box-sizing: border-box;
+            }
+            
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 16px
+            }
+            /* media screen for desktop with min-width 786px */
+            
+            @media(min-width:768px) {
+                div.toggle-icon,
+                .toggle-times,
+                .nav-list,
+                .navbar-brand,
+                .arrow-container,
+                .navbar {
+                    display: none
+                }
+                /* navbar brand logo */
+                a.desktop-navbar-brand {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 30px;
+                    text-align: center;
+                    text-transform: lowercase;
+                }
+                /* li a desktop */
+                a.nav-link {
+                    text-decoration: none;
+                    color: white;
+                    position: relative
+                }
+                /* ul nav-nav */
+                ul.navbar-nav {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    flex: 1
+                }
+                /* li nav-item */
+                li.nav-item {
+                    display: inline-block;
+                    width: 20px;
+                    padding: 1em;
+                    padding-left: 3em
+                }
+                /* navlink hover */
+                a.nav-link:hover {
+                    position: relative
+                }
+                /* navlink hover styles */
+                a.nav-link:hover::after {
+                    position: absolute;
+                    content: "";
+                    top: 1.5em;
+                    left: 0;
+                    width: 100%;
+                    height: 0.18rem;
+                    background: gray;
+                    animation-name: hover;
+                    animation-duration: .2s;
+                }
+                /* keyframes */
+                @keyframes hover {
+                    from {
+                        width: 0%
+                    }
+                    to {
+                        width: 100%
+                    }
+                }
+                /* active class in desktop */
+                .active::after {
+                    position: absolute;
+                    content: "";
+                    top: 1.5em;
+                    left: 0;
+                    width: 100%;
+                    height: 0.18rem;
+                    background: gray;
+                }
+                /* desktop nav */
+                nav {
+                    margin-left: 2em;
+                    margin-right: 2em;
+                    display: flex;
+                    padding-top: 0.5em;
+                }
+                /* heaader tag for flex */
+                header {
+                    background: url(../image/desktop-image-hero-1.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 500px;
+                    width: 60%;
+                }
+                /* shop now container */
+                .shop-now {
+                    background-color: white;
+                    padding-top: 5em;
+                    padding-left: 3em;
+                    padding-right: 1.5em;
+                    padding-bottom: 2.5em;
+                    width: 33%;
+                    position: relative;
+                    left: 60%;
+                    top: -87vh
+                }
+                /* shop now header text */
+                .shop-now h1 {
+                    font-size: 2.3em;
+                    line-height: 1;
+                    padding-bottom: 0.5em;
+                }
+                /* shop now paragraph text */
+                .shop-now p {
+                    font-weight: 600;
+                    color: rgb(185, 179, 179);
+                }
+                /* shop now h3(shop) */
+                .shop-now h3 {
+                    font-size: 2em;
+                    margin-top: 1em;
+                    letter-spacing: 7;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                }
+                /* desktop arrow for shop now */
+                .shop-now-arrow {
+                    font-size: 1.5em;
+                    text-indent: 100px
+                }
+                /* arrow  left and right at shop now */
+                span.arrow-left,
+                span.arrow-right {
+                    font-size: 40px;
+                    padding: 0.5em;
+                    color: rgb(206, 197, 197);
+                    cursor: pointer
+                }
+                /* desktop container */
+                div.desktop-arrow-container {
+                    background: black;
+                    width: fit-content;
+                    padding: 0.5em;
+                    position: relative;
+                    top: 2.5em;
+                    left: -3em
+                }
+                /* about desktop container desktop */
+                .desktop-about {
+                    margin-top: -87vh;
+                    display: flex
+                }
+                /* about us desktop */
+                .about-us {
+                    background-color: white;
+                    padding-top: 1em;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-bottom: 1em;
+                    width: 50%
+                }
+                /* about us as a header */
+                .about-us h1 {
+                    padding-bottom: 0.5em;
+                    word-spacing: 5;
+                    letter-spacing: 3;
+                }
+                /* about paragraph */
+                .about-us p {
+                    font-weight: 600;
+                    color: rgb(185, 179, 179);
+                }
+                /* desktop img styles */
+                img {
+                    width: 400px
+                }
+            }
+            /* navbar ul */
+            /* logo */
+            /* max-width of 786px mobile responsiveness */
+            
+            @media (max-width: 786px) {
+                /* nabar-brand mobile */
+                a.navbar-brand {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 30px;
+                    text-align: center;
+                    flex: 1;
+                    text-transform: lowercase;
+                }
+                li.nav-item {
+                    position: relative;
+                    left: 3em;
+                    top: 1em;
+                    margin-left: 15px
+                }
+                ul.navbar-nav {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    top: 0.8em;
+                    padding-left: 3em;
+                }
+                /* navbar anchor tag */
+                a.nav-link {
+                    text-decoration: none;
+                    color: black;
+                    position: relative
+                }
+                a.nav-link:hover {
+                    position: relative
+                }
+                a.nav-link:hover::after {
+                    position: absolute;
+                    content: "";
+                    top: 1.5em;
+                    left: 0;
+                    width: 100%;
+                    height: 0.18rem;
+                    background: gray;
+                    transition: .2s;
+                    animation-name: hover;
+                    animation-duration: .2s;
+                }
+                @keyframes hover {
+                    from {
+                        width: 0%
+                    }
+                    to {
+                        width: 100%
+                    }
+                }
+                /* navbar-toggle */
+                div.toggle-icon {
+                    font-size: 30px;
+                    cursor: pointer;
+                    color: white
+                }
+                /* navbar list style */
+                li.nav-item {
+                    display: inline;
+                    padding-left: 0.5em
+                }
+                /* navbar container */
+                nav.navbar {
+                    display: flex;
+                    height: 400px;
+                    padding: 1em;
+                    background: url(../image/mobile-image-hero-1.jpg);
+                    background-size: cover;
+                    background-position: center;
+                }
+                /* sliding arrows */
+                span.arrow-left,
+                span.arrow-right {
+                    font-size: 40px;
+                    padding: 0.5em;
+                    color: rgb(206, 197, 197);
+                    cursor: pointer
+                }
+                div.arrow-container {
+                    background: black;
+                    width: fit-content;
+                    padding: 0.5em;
+                    position: absolute;
+                    right: 0;
+                    top: 363
+                }
+                /* section container */
+                .shop-now h1 {
+                    font-size: 2.3em;
+                    line-height: 1;
+                    padding-bottom: 0.5em;
+                }
+                .shop-now p,
+                .about-us p {
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    color: rgb(185, 179, 179);
+                }
+                .shop-now h3 {
+                    font-size: 2em;
+                    margin-top: 1em;
+                    letter-spacing: 7;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                }
+                .shop-now-arrow {
+                    font-size: 1.5em;
+                    text-indent: 100px
+                }
+                .shop-now,
+                .about-us {
+                    background-color: white;
+                    padding-top: 4em;
+                    padding-left: 2em;
+                    padding-right: 1.5em;
+                    padding-bottom: 4em
+                }
+                .dark-furniture-image img {
+                    width: 100%
+                }
+                .about-us h1 {
+                    padding-bottom: 0.5em;
+                    word-spacing: 5;
+                    letter-spacing: 3;
+                }
+                .nav-list {
+                    display: none;
+                    align-items: center;
+                    background: white;
+                    margin-left: -30px;
+                    margin-top: -14px;
+                    height: 100px;
+                    width: 111%;
+                    margin-right: -30px
+                }
+                .toggle-times {
+                    text-decoration: none;
+                    color: rgb(206, 197, 197);
+                    position: absolute;
+                    font-size: 40px;
+                    top: 0;
+                    left: 33
+                }
+                /* hiddem classNames */
+                div.desktop-arrow-container,
+                .desktop-navbar-brand,
+                .desktop-nav-list {
+                    display: none;
+                }
+            }
